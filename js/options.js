@@ -7,11 +7,9 @@ function saveChanges() {
 	localStorage["password"] = password;
 
 	var display = document.getElementById('saveDisplay');
-	display.innerHTML = "Saved Changes";
+	display.innerHTML = "<h4>Changes Saved</h4>";
 
-	setTimeout(function(){
-		display.innerHtml = '';
-	},500);
+	$('#saveDisplay').fadeIn('slow').delay(500).fadeOut('slow');
 }
 
 function loadSettings() {
