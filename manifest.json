@@ -26,12 +26,13 @@
 
 	"web_accessible_resources": [
 		"js/jquery-1.9.1.min.js",
-		"js/reset.js"
+		"js/reset.js",
+		"js/css_changes.js"
 	],
 
 	"content_scripts":[
     	{
-    	  "matches": ["http://*/*","https://*/*"],
+    	  "matches": ["https://www.fanshaweonline.ca/*"],
     	  "css": [],
     	  "js": ["js/inject.js"]
     	}
