@@ -4,20 +4,36 @@
 	"name":"FOL Auto Login",
 	"version":"0.1",
 	"description":"Log in to FOL with the click of a button",
-	"background": {
-		"page":"bg.html"
-	},
+
 	"options_page":"options.html",
 	"icons": {
 		"16":"images/icon16.png",
 		"48":"images/icon48.png",
 		"128":"images/icon128.png"
 	},
+
+	"background": {
+		"page":"bg.html"
+	},
+	
 	"browser_action": {
 		"default_icon":"images/icon16.png",
 		"default_title":""
 	},
 	"permissions": [
 		"tabs"
-	]
+	],
+
+	"web_accessible_resources": [
+		"js/jquery-1.9.1.min.js",
+		"js/reset.js"
+	],
+
+	"content_scripts":[
+    	{
+    	  "matches": ["http://*/*","https://*/*"],
+    	  "css": [],
+    	  "js": ["js/inject.js"]
+    	}
+  	]
 }
