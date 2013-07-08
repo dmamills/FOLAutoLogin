@@ -1,7 +1,4 @@
-
 $(document).ready(function(){
-	//$('#login').click(function(e){
-
 		var userName = localStorage['userName'];
 		var password = localStorage['password'];
 
@@ -9,5 +6,4 @@ $(document).ready(function(){
 		$('#password').val(password); 
 
 		$('#testform').submit();
-	//});
 });
