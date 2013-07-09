@@ -2,7 +2,7 @@
 	"manifest_version":2,
 
 	"name":"FOL Auto Login",
-	"version":"0.1",
+	"version":"0.2",
 	"description":"Log in to FOL with the click of a button",
 
 	"options_page":"options.html",
@@ -26,7 +26,7 @@
 
 	"web_accessible_resources": [
 		"js/jquery-1.9.1.min.js",
-		"js/reset.js",
+		"js/js_changes.js",
 		"js/css_changes.js"
 	],
 

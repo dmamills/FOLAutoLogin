@@ -15,9 +15,8 @@ function injectScript(scriptName) {
 	};
 };
 
-var jq = 'js/jquery-1.9.1.min.js';
-var reset = 'js/reset.js';
-var css = 'js/css_changes.js';
-injectScript(jq);
-injectScript(reset);
-injectScript(css);
+var scripts = ['js/jquery-1.9.1.min.js','js/js_changes.js','js/css_changes.js'];
+
+scripts.forEach(function(s){
+	injectScript(s);
+});
