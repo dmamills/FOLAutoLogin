@@ -20,9 +20,8 @@ Login in Fanshawe Online in a single click using this simple Chrome Extension
         "js/yourfilenamehere.js"
 	],
   ```
-3. In inject.js add the following code:
+3. In inject.js add the filename to the scripts array:
 
   ```
-      var filename = "js/filename.js";
-      injectScript(filename);
+      var scripts = ['...','yourfilenamehere.js'];
   ```
