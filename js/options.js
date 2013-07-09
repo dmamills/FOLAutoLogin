@@ -1,10 +1,7 @@
 function saveChanges() {
 
-	var userName = document.getElementById('userName').value;
-	var password = document.getElementById('password').value;
-
-	localStorage["userName"] = userName;
-	localStorage["password"] = password;
+	localStorage["userName"] = document.getElementById('userName').value;;
+	localStorage["password"] = document.getElementById('password').value;;
 
 	var display = document.getElementById('saveDisplay');
 	display.innerHTML = "<h4>Changes Saved</h4>";
@@ -14,14 +11,11 @@ function saveChanges() {
 
 function loadSettings() {
 
-	var userName = localStorage["userName"] || '';
-	var password = localStorage["password"] || '';
-
 	var userNameEl = document.getElementById('userName');
-	userNameEl.value = userName;
+	userNameEl.value = localStorage["userName"] || '';
 
 	var passwordEl = document.getElementById('password');
-	passwordEl.value = password;
+	passwordEl.value = localStorage["password"] || '';
 }
 
 document.addEventListener('DOMContentLoaded',loadSettings);
