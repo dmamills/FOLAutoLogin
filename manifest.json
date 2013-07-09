@@ -1,10 +1,10 @@
 {
 	"manifest_version":2,
 
-	"name":"FOL Auto Login",
-	"version":"0.2",
-	"description":"Log in to FOL with the click of a button",
-
+	"name":"FOL Login",
+	"version":"0.5",
+	"description":"Log into Fanshawe Online with the click of a button",
+	"update_url": "http://danielmills.me/follogin/updates.xml",
 	"options_page":"options.html",
 	"icons": {
 		"16":"images/icon16.png",
