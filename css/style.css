@@ -1,8 +1,13 @@
-#infowrap {
-	margin-top:50px;
+.install {	
+	height:575px;
+}
+
+.wrap {
+	margin-top:25px;
 	padding:25px;
 	background-color:#F7F7F7;
 	border:1px solid #e5e5e5;
+	text-align:center;
 }
 
 body {
@@ -13,4 +18,12 @@ body {
 	overflow:hidden;
 	min-height: 40px;
 	max-height: 40px
+}
+
+img .fc {
+	margin:0 auto;
+}
+
+#saveButton {
+	margin-top:10px;
 }

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-		var userName = localStorage['userName'];
+		var userName = localStorage['username'];
 		var password = localStorage['password'];
 
 		$('#userName').val(userName);
