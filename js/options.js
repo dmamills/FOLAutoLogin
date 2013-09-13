@@ -1,10 +1,10 @@
 function saveChanges() {
 
-	localStorage["userName"] = document.getElementById('username').value;
+	localStorage["username"] = document.getElementById('username').value;
 	localStorage["password"] = document.getElementById('password').value;
 
 	var display = document.getElementById('saveDisplay');
-	display.innerHTML = "<h4>Changes Saved</h4>";
+	display.innerHTML = "<h4>Changes Saved.</h4>";
 
 	$('#saveDisplay').fadeIn('slow').delay(500).fadeOut('slow');
 }

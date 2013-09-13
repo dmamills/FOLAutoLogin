@@ -3,11 +3,20 @@
 }
 
 .wrap {
+margin-top:25px;
+	padding:25px;
+	background-color:#F7F7F7;
+	border:1px solid #e5e5e5;
+	text-align:center;
+}
+
+#infowrap {
 	margin-top:25px;
 	padding:25px;
 	background-color:#F7F7F7;
 	border:1px solid #e5e5e5;
 	text-align:center;
+	height:575px;
 }
 
 body {
