@@ -1,7 +1,7 @@
 {
 	"manifest_version":2,
 	"name":"Fanshawe Online Express",
-	"version":"0.9",
+	"version":"1.0",
 	"description":"Log into Fanshawe Online with the click of a button",
 	"options_page":"options.html",
 	"icons": {

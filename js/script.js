@@ -1,8 +1,5 @@
 $(function() {
 		var username = localStorage['username'],
 			password = localStorage['password'];
-			
-		document.getElementById('username').value = username;
-		document.getElementById('password').value = password;
-		document.forms[0].submit();
+		window.location = 'https://'+username+':'+password+'@portal.myfanshawe.ca/_layouts/Fanshawe/fol_pass_thru.aspx##';
 });
