@@ -1,34 +1,35 @@
 {
-	"manifest_version":2,
-	"name":"Fanshawe Online Express",
-	"version":"1.0",
-	"description":"Log into Fanshawe Online with the click of a button",
-	"options_page":"options.html",
-	"icons": {
-		"16":"images/fc-128x128.png",
-		"48":"images/fc-128x128.png",
-		"128":"images/fc-128x128.png"
-	},
-	"background": {
-		"scripts": [ "js/bg.js" ]
-	},
-	"browser_action": {
-		"default_icon":"images/fc-128x128.png",
-		"default_title":""
-	},
-	"permissions": [
-		"tabs"
-	],
-	"web_accessible_resources": [
-		"js/jquery-1.9.1.min.js",
-		"js/js_changes.js",
-		"js/css_changes.js"
-	],
-	"content_scripts":[
-    	{
-    	  "matches": ["https://www.fanshaweonline.ca/*"],
-    	  "css": [],
-    	  "js": ["js/inject.js"]
-    	}
-  	]
+    "manifest_version":2,
+    "name":"Fanshawe Online Express",
+    "version":"1.0",
+    "description":"Log into Fanshawe Online with the click of a button",
+    "options_page":"options.html",
+    "icons": {
+        "16":"images/fc-128x128.png",
+        "48":"images/fc-128x128.png",
+        "128":"images/fc-128x128.png"
+    },
+    "background": {
+        "scripts": [ "js/bg.js" ]
+    },
+    "browser_action": {
+        "default_icon":"images/fc-128x128.png",
+        "default_title":""
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "web_accessible_resources": [
+        "js/jquery-1.9.1.min.js",
+        "js/js_changes.js",
+        "js/css_changes.js"
+    ],
+    "content_scripts":[
+        {
+          "matches": ["https://www.fanshaweonline.ca/*"],
+          "css": [],
+          "js": ["js/inject.js"]
+        }
+    ]
 }

@@ -2,22 +2,36 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/codemirror.css" />
 </head>
 <body>
-	<div class="row-fluid">
-		<div class="span4 offset4 wrap">
-			<img src="images/fc-128x128.png" class="fc">
-			<h1>Fanshawe Online Express Options </h1>	
-			<fieldset>
-			<legend>FOL Account Settings</legend>
-			<input type="text" id="username" placeholder="User Name"/>
-			<input type="password" id="password" placeholder="Password" />
-			<br/>
-			<button class="btn btn-primary btn-large" id="saveButton"> Save Settings </button>
-			</fieldset>
-			<div id="saveDisplayWrap"><div id="saveDisplay"></div></div>
-	</div>
-	<script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/options.js"></script>
+    <div class="row-fluid">
+        <div class="span8 offset2 wrap">
+            <div class="text-center">
+                <img src="images/fc-128x128.png" class="fc">
+                <h1>Fanshawe Online Express Options </h1>
+            </div>
+            <fieldset>
+            <legend>FOL Account Settings</legend>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="User Name"/>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" />
+            
+            <label for="customer_css">Custom CSS</label>
+            <textarea id="custom_css" rows="6" placeholder="Custom CSS"></textarea>
+            <label for="customer_js">Custom JS</label>
+            <textarea id="custom_js" rows="6" placeholder="Custom JS"></textarea>
+
+            <br/>
+            <button class="btn btn-primary btn-large" id="saveButton"> Save Settings </button>
+            </fieldset>
+            <div id="saveDisplayWrap"><div id="saveDisplay"></div></div>
+    </div>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/codemirror.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/css.js"></script>
+    <script src="js/options.js"></script>
 </body>
 </html>
