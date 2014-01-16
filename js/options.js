@@ -6,7 +6,7 @@ function saveChanges() {
     localStorage["username"] = document.getElementById('username').value;
     localStorage["password"] = document.getElementById('password').value;
 
-    if(custom_css || custom_js) {
+    if(cssEditor || jsEditor) {
         var custom_css = cssEditor.getValue(),
             custom_js = jsEditor.getValue();
 
