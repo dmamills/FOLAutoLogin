@@ -1,7 +1,7 @@
 {
     "manifest_version":2,
     "name":"Fanshawe Online Express",
-    "version":"1.0",
+    "version":"1.1",
     "description":"Log into Fanshawe Online with the click of a button",
     "options_page":"options.html",
     "icons": {
@@ -21,9 +21,7 @@
         "storage"
     ],
     "web_accessible_resources": [
-        "js/jquery-1.9.1.min.js",
-        "js/js_changes.js",
-        "js/css_changes.js"
+        "js/jquery-1.9.1.min.js"
     ],
     "content_scripts":[
         {

@@ -1,1 +1,0 @@
-$('#d_content_inner').css('padding','');

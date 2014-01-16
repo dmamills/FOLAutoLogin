@@ -17,7 +17,7 @@ function injectScript(scriptName) {
 
 function injectJS(js){
     var s = document.createElement('script');
-    s.src = js;
+    s.appendChild(document.createTextNode(js));
     (document.head||document.documentElement).appendChild(s);
     s.onload = function() { s.parentNode.removeChild(s);};
 }
@@ -29,7 +29,7 @@ function injectCSS(css) {
     (document.head||document.documentElement).appendChild(s);
 }
 
-var scripts = ['js/jquery-1.9.1.min.js','js/js_changes.js','js/css_changes.js'];
+var scripts = ['js/jquery-1.9.1.min.js'];
 scripts.forEach(function(s){
     injectScript(s);
 });
