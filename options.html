@@ -5,28 +5,39 @@
 <link rel="stylesheet" type="text/css" href="css/codemirror.css" />
 </head>
 <body>
-    <div class="row-fluid">
-        <div class="span8 offset2 wrap">
-            <div class="text-center">
-                <img src="images/fc-128x128.png" class="fc">
-                <h1>Fanshawe Online Express Options </h1>
-            </div>
-            <fieldset>
-            <legend>FOL Account Settings</legend>
-            <label for="username">Username</label>
-            <input type="text" id="username" placeholder="User Name"/>
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password" />
-            
-            <label for="customer_css">Custom CSS</label>
-            <textarea id="custom_css" rows="6" placeholder="Custom CSS"></textarea>
-            <label for="customer_js">Custom JS</label>
-            <textarea id="custom_js" rows="6" placeholder="Custom JS"></textarea>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 wrap">
+                <div class="text-center">
+                    <img src="images/fc-128x128.png" class="fc">
+                    <h1>Fanshawe Online Express Options </h1>
+                </div>
 
-            <br/>
-            <button class="btn btn-primary btn-large" id="saveButton"> Save Settings </button>
-            </fieldset>
-            <div id="saveDisplayWrap"><div id="saveDisplay"></div></div>
+                <fieldset>
+                    <legend>FOL Account Settings</legend>
+                    <div class="input-group">
+                        <span class="input-group-addon">Username</span>
+                        <input type="text" class="form-control" id="username" placeholder="User Name"/>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Password</span>
+                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                    </div>
+                <br>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Custom Code</legend>
+                    <label for="customer_css">Custom CSS</label>
+                    <textarea id="custom_css" placeholder="Custom CSS"></textarea>
+                    <label for="customer_js">Custom JS</label>
+                    <textarea id="custom_js"  placeholder="Custom JS"></textarea>
+                </fieldset>
+                <br/>
+                <button class="btn btn-primary btn-lg sm-margin" id="saveButton"> Save Settings </button>
+                
+                <div class="saveDisplayWrap"><div id="saveDisplay"></div></div>
+        </div>
     </div>
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/codemirror.js"></script>

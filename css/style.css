@@ -1,46 +1,29 @@
-.install {  
-    height:575px;
-}
-
-.wrap {
-    margin-top:25px;
-    padding:25px;
-    background-color:#F7F7F7;
-    border:1px solid #e5e5e5;
-}
-
-#infowrap {
-    margin-top:25px;
-    padding:25px;
-    background-color:#F7F7F7;
-    border:1px solid #e5e5e5;
-    text-align:center;
-    height:575px;
-}
-
 body {
     background-color: #A09E9E;
 }
 
-#saveDisplayWrap{
+fieldset {
+    margin-top:25px;
+}
+
+.wrap {
+    margin-top:25px;
+    margin-bottom:25px;
+    padding:25px;
+    background-color:#F7F7F7;
+    border:1px solid #e5e5e5;
+}
+
+.saveDisplayWrap {
     overflow:hidden;
     min-height: 40px;
     max-height: 40px
-}
-
-#custom_css {
-    width:90%;
-}
-
-
-#custom_js {
-    width:90%;
 }
 
 img .fc {
     margin:0 auto;
 }
 
-#saveButton {
+.sm-margin {
     margin-top:10px;
 }

@@ -6,18 +6,24 @@ function saveChanges() {
     localStorage["username"] = document.getElementById('username').value;
     localStorage["password"] = document.getElementById('password').value;
 
-    var custom_css = cssEditor.getValue(),
-        custom_js = jsEditor.getValue();
+    if(custom_css || custom_js) {
+        var custom_css = cssEditor.getValue(),
+            custom_js = jsEditor.getValue();
 
-    var data = {'custom_css':custom_css,'custom_js':custom_js};
+        var data = {'custom_css':custom_css,'custom_js':custom_js};
 
-    chrome.storage.sync.set(data,function(){
-            var display = document.getElementById('saveDisplay');
-            display.innerHTML = "<h4>Changes Saved.</h4>";
-        
-            $('#saveDisplay').fadeIn('slow').delay(1000).fadeOut('slow');
-    });
+        chrome.storage.sync.set(data,function(){
+               displaySave();
+        });
+    } else {
+        displaySave();
+    }
+}
 
+function displaySave() {
+    var display = document.getElementById('saveDisplay');
+        display.innerHTML = "<h4>Changes Saved.</h4>";
+        $('#saveDisplay').fadeIn('slow').delay(1000).fadeOut('slow');
 }
 
 function loadSettings() {
