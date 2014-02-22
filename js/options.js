@@ -3,21 +3,24 @@ var cssEditor,
 
 function saveChanges() {
 
-    localStorage["username"] = document.getElementById('username').value;
-    localStorage["password"] = document.getElementById('password').value;
+    var un = document.getElementById('username').value,
+        pw = document.getElementById('password').value;
 
-    if(custom_css || custom_js) {
+    if(cssEditor && jsEditor) {
         var custom_css = cssEditor.getValue(),
             custom_js = jsEditor.getValue();
-
-        var data = {'custom_css':custom_css,'custom_js':custom_js};
-
-        chrome.storage.sync.set(data,function(){
-               displaySave();
-        });
-    } else {
-        displaySave();
     }
+
+    var data = { 
+                 'custom_css':custom_css || '',
+                 'custom_js':custom_js || '',
+                 'un':un,
+                 'pw':pw 
+                };
+
+    chrome.storage.sync.set(data,function() {
+           displaySave();
+    });
 }
 
 function displaySave() {
@@ -28,17 +31,13 @@ function displaySave() {
 
 function loadSettings() {
 
-    var userNameEl = document.getElementById('username');
-    userNameEl.value = localStorage["username"] || '';
-
-    var passwordEl = document.getElementById('password');
-    passwordEl.value = localStorage["password"] || '';
-
     chrome.storage.sync.get(null,function(obj) {
         
-        var cssEl = document.getElementById('custom_css');
-        var jsEl = document.getElementById('custom_js');
-
+        var cssEl = document.getElementById('custom_css'),
+            jsEl = document.getElementById('custom_js'),
+            userNameEl = document.getElementById('username'),
+            passwordEl = document.getElementById('password');
+        
         //create CodeMirrors
         jsEditor = CodeMirror.fromTextArea(jsEl,{ mode: "javascript", lineNumbers:true});
         cssEditor = CodeMirror.fromTextArea(cssEl,{ mode: "css", lineNumbers:true});
@@ -47,8 +46,11 @@ function loadSettings() {
         jsEditor.getDoc().setValue(obj.custom_js);
         cssEditor.getDoc().setValue(obj.custom_css);
 
+        userNameEl.value = obj.un;
+        passwordEl.value = obj.pw;
+
     });
 }
 
-document.addEventListener('DOMContentLoaded',loadSettings);
+if(window.location.pathname !== '/install.html') document.addEventListener('DOMContentLoaded',loadSettings);
 document.querySelector('#saveButton').addEventListener('click',saveChanges);

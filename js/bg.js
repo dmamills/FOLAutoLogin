@@ -4,25 +4,21 @@ var routes = {
 	'login':'follogin.html'
 };
 
-function hasInformation(){
-	return (!localStorage['username'] || !localStorage['password']);
-}
-
 function openPage(page) {
 	chrome.tabs.create({'url':page});
 };
 
 function onClicked(tab) {
-	if(hasInformation())
-		openPage(routes['options']);
-	else
-		openPage(routes['login']);
+	chrome.storage.sync.get(null,function(obj){
+		if(obj.un !== '' && obj.pw !== '')
+			openPage(routes['login']);	
+		else
+			openPage(routes['options']);
+	});
 };
 
 function onInstall(details) {
-	 if(hasInformation()) {
-     	openPage(routes['install']);
-    }
+	 openPage(routes['install']);
 };
 
 chrome.runtime.onInstalled.addListener(onInstall);
