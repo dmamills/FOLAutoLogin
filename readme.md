@@ -9,19 +9,14 @@ Login in Fanshawe Online in a single click using this simple Chrome Extension
  3. Click Load Unpacked Extension, point dialog to root of local repository
  4. When you make changes, click reload to update.
  
-### Adding Javascript to Inject
+### Adding Custom Code to Fanshawe Online
 
-1. Add script to js folder
-2. In manifest.json add:
+This extension also allows you to add your own javascript and css, that will be applied everytime FOL is loaded.
 
-  ```
-      "web_accessible_resources": [
-      	....,
-        "js/yourfilenamehere.js"
-	],
-  ```
-3. In inject.js add the filename to the scripts array:
+1. Open Chrome extension page
+2. Click on options for Fanshawe Online Express
+3. Add CSS and Javascript to provided text areas
+4. Save changes and you're ready to roll. 
 
-  ```
-      var scripts = ['...','yourfilenamehere.js'];
-  ```
+Note: You are able to jQuery in the javascript section.
+
