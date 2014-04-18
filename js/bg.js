@@ -9,11 +9,16 @@ function openPage(page) {
 };
 
 function onClicked(tab) {
-	chrome.storage.sync.get(null,function(obj){
-		if(obj.un !== '' && obj.pw !== '')
-			openPage(routes['login']);	
-		else
-			openPage(routes['options']);
+	chrome.storage.sync.get(null,function(obj) {
+		if(navigator.onLine) {
+		  if(obj.un !== '' && obj.pw !== '')
+		  	openPage(routes['login']);
+		  else
+		  	openPage(routes['options']);
+		} else {
+			console.log('not online!');
+
+		}
 	});
 };
 
